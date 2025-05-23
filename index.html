@@ -6,8 +6,20 @@
   <title>Carrusel de Imagenes</title>
   <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="">
-  <h1 class="bg-black text-white">Hola</h1>
+<body>
+  <main class="py-8 px-4 min-h-screen w-full bg-[#F4F7FA] flex flex-col items-center">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 h-auto">Galería de Imágenes</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Una hermosa colección de imágenes tecnológicas en un carrusel interactivo</p>
+    </div>
+    <section>
+      <div class="bg-gradient-to-t from-black/20 to-transparent">
+        <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-105"><img src="./images/flecha_izquierda.svg" alt=""></button>
+        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-105"></button>
+        <img class="h-[256px] rounded-2xl" src="./images/laptop_encendida.jpeg" alt="">
+      </div>
+    </section>
+  </main>
   <script src="./index.js"></script>
 </body>
 </html>
