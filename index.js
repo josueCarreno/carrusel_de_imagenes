@@ -35,6 +35,7 @@ avanzar.addEventListener("click", () => {
 
 function desplazarImagen(booleano = true){
   let direccion = "";
+  let direccion2 = "";
   switch (booleano){
     case true:
       contador++;
@@ -56,6 +57,11 @@ function desplazarImagen(booleano = true){
       contador--;
       break
   }
+  if (direccion == "left"){
+    direccion2 = "right";
+  } else {
+    direccion2 = "left";
+  }
   let indice = imagenes[contador].imagen;
   let descripcion = imagenes[contador].descripcion;
   let posicion = imagenes[contador].posicion;
@@ -69,10 +75,20 @@ function desplazarImagen(booleano = true){
       indicadores.children[i].classList.add("bg-white", "shadow-lg");
     }
   }
-  document.getElementById("contenedor").innerHTML = `<img id="imagen" data-aos="fade-${direccion}" data-aos-duration="1000" class="md:min-h-[384px] lg:min-h-[500px] w-full max-w-[896px]  h-[256px] rounded-2xl" src="${indice}" alt="">`;  
+  document.getElementById("imagen").setAttribute("data-aos", `fade-${direccion2}`);
+  document.getElementById("imagen").setAttribute("data-aos-duration", "1000");
+  setTimeout(() => {
+    
+    document.getElementById("contenedor").innerHTML = `<img id="imagen" data-aos="fade-${direccion}" data-aos-duration="1000" class="md:min-h-[384px] lg:min-h-[500px] w-full  h-[256px] rounded-2xl" src="${indice}" alt="">`;  
+    
+  }, 1000);
+  /*setTimeout(() => {
+    document.getElementById("imagen").setAttribute("data-aos", "");
+    document.getElementById("imagen").setAttribute("data-aos-duration", "");
+  }, 2000);*/
   document.getElementById("descripcion").innerHTML = descripcion;
   document.getElementById("posicion").innerHTML = posicion;
-  
+
 }
 
-setInterval(desplazarImagen, 5000);
+//setInterval(desplazarImagen, 5000);
