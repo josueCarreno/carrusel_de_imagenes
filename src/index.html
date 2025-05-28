@@ -10,16 +10,19 @@
 </head>
 <body class="bg-[#F4F7FA] ">
   <main class="py-8 px-4 w-full flex flex-col items-center">
+    <!--Encabezado de la sección -->
     <div class="text-center mb-8">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 h-auto">Galería de Imágenes</h1>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">Una hermosa colección de imágenes tecnológicas en un carrusel interactivo</p>
     </div>
+    <!--  Contenido Principal -->
     <section class="w-full flex flex-col items-center">
+      <!--  Carrusel de Imagenes -->
       <article class="relative max-w-[896px] w-full">
+        <!--  Botones de navegación -->
         <button id="boton-retroceder" class="cursor-pointer z-10 absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-105"><img src="./images/flecha_izquierda.svg" alt=""></button>
-        
         <button id="boton-avanzar" class=" cursor-pointer z-10 absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-105"><img src="./images/flecha_derecha.svg" alt=""></button>
-        
+        <!--  Indicadores para saber la posicion de la imagen -->
         <div id="indicadores" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
           <button class="w-3 h-3 rounded-full transition-all duration-200 bg-white shadow-lg hover:bg-white/75"></button>
           <button class="w-3 h-3 rounded-full transition-all duration-200 bg-white/50 hover:bg-white/75"></button>
@@ -27,14 +30,12 @@
           <button class="w-3 h-3 rounded-full transition-all duration-200 bg-white/50 hover:bg-white/75"></button>
           <button class="w-3 h-3 rounded-full transition-all duration-200 bg-white/50 hover:bg-white/75"></button>
         </div>
-
+        <!--  Contenedor de la imagen -->
         <div id="contenedor" class="flex items-center justify-center ">
           <img id="imagen" class="md:min-h-[384px] lg:min-h-[500px] h-[256px] w-full  rounded-2xl" src="./images/laptop_encendida.jpeg" alt="">
         </div>
-
-
-
       </article>
+      <!--  Información de la imagen junto con la posición de la imagen-->
       <div class="flex flex-col gap-12">
         <div class="mt-6 text-center">
           <p id="descripcion" class="text-gray-600 font-medium">Laptop encendida</p>
