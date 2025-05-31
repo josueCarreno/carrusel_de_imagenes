@@ -30,10 +30,12 @@ avanzar = document.getElementById("boton-avanzar");
 
 // Eventos
 retroceder.addEventListener("click", () => {
+  empezarTiempo();
   evaluarDirecciones(false);
 });
 
 avanzar.addEventListener("click", () => {
+  empezarTiempo();
   evaluarDirecciones(true);
 });
 
@@ -60,7 +62,6 @@ function evaluarDirecciones(booleano = true) {
       direccion = "left";
       break
     case false:
-      console.log(contador);
       if (contador <= 0){
         contador = 5;
         direccion = "left";
@@ -151,6 +152,18 @@ function desplazarImagenNueva() {
   descripcionHtml.innerHTML = descripcion;
   posicionHtml.innerHTML = posicion;
 }
+// Variavle para representar el intervalo de tiempo entre las transiciones de las imagenes
+let identificadorTiempo;
 
-// Carrusel automatico
-setInterval(evaluarDirecciones, 5000);
+/** 
+* @function empezarTiempo
+* @description Función que se encarga de iniciar y reiniciar el intervalo de tiempo de las transiciones
+* @returns {void}
+*/
+
+function empezarTiempo() {
+  clearInterval(identificadorTiempo);
+  identificadorTiempo = setInterval(evaluarDirecciones, 5000);
+}
+
+empezarTiempo();
