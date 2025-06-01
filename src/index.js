@@ -153,7 +153,7 @@ function desplazarImagenNueva() {
   posicionHtml.innerHTML = posicion;
 }
 // Variavle para representar el intervalo de tiempo entre las transiciones de las imagenes
-let identificadorTiempo;
+let identificadorTiempo = 0;
 
 /** 
 * @function empezarTiempo
