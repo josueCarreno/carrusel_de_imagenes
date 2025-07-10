@@ -1,2 +1,2 @@
 # carrusel_de_imagenes
-js
+Una hermosa colección de imágenes tecnológicas en un carrusel interactivo.
